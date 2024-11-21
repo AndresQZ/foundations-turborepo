@@ -1,0 +1,7 @@
+node_modules/**
+.turbo/**
+.dist/**
+# Optional: Ignore any specific files for your monorepo structure if required
+packages/*/node_modules
+packages/*/.turbo
+packages/*/dist

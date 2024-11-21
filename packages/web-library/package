@@ -1,0 +1,45 @@
+{
+    "name": "foundations-web-library",
+    "version": "1.0.8",
+    "description": "web library, typescript with rollup multiple entry points",
+    "type": "module",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/clients.js",
+    "scripts": {
+        "dev": "tsc --watch",
+        "build": "rollup -c"
+    },
+    "exports": {
+      ".": {
+       "types": "./dist/types/index.d.ts",
+       "import" : "./dist/esm/clients.js",
+       "default": "./dist/esm/clients.js"
+      },
+      "./internal": {
+        "types" : "./dist/types/internal/internal.d.ts",
+        "import": "./dist/esm/internal.js",
+        "default" : "./dist/esm/internal.js"
+      },
+      "./proxy": "./dist/esm/proxy.js",
+      "./utils": {
+        "types": "./dist/types/utils/utils.d.ts",
+        "import": "./dist/esm/utils.js",
+        "default": "./dist/esm/utils.js"
+      }
+    },
+    "files": [
+      "src/*+",
+      "dist/**",
+      "packages.json"
+    ],
+    "devDependencies": {
+        "@repo/typescript-config": "*",
+        "@rollup/plugin-commonjs": "^28.0.1",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "rollup": "^2.79.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "typescript": "^5.6.3",
+        "rollup-plugin-copy": "3.5.0"
+    }
+}

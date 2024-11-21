@@ -1,0 +1,29 @@
+{
+    "name": "@repo/elements",
+    "type": "module",
+    "scripts": {
+        "dev": "tsc --watch",
+        "build": "rollup --config"
+    },
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        "./add": {
+            "types": "./src/add.ts",
+            "default": "./dist/add.js"
+        },
+        "./helper": {
+            "import": "./src/coreLibrary/utils"
+        }
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "*",
+        "@rollup/plugin-typescript": "^12.1.0",
+        "@types/react": "^18.3.10",
+        "react": "^18.3.1",
+        "rollup": "^4.24.0",
+        "tslib": "^2.7.0",
+        "typescript": "^5.6.2"
+    }
+}

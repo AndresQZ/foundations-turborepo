@@ -1,0 +1,11 @@
+{
+     "compilerOptions": {
+      "outDir": "dist/core",
+      "rootDir": "src",
+      "jsx": "react",
+      "module": "ESNext",
+      "moduleResolution": "Bundler"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]    
+  }

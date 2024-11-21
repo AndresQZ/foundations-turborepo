@@ -1,0 +1,65 @@
+{
+    "name": "foundations-web-library",
+    "description": "web library, typescript with rollup multiple entry points",
+    "author": "andresqz",
+    "version": "1.0.19",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "typings": "dist/index.d.ts",
+    "engines": {
+      "node": ">=12.20.0"
+    },
+    "sideEffects": false,
+    "scripts": {
+      "build": "npm run rollup && npm run post:build",
+      "post:build": "node ./scripts/frankBuild.js",
+      "rollup": "rm -rf dist && rollup -c"
+    },
+    "peerDependencies": {
+      "react": ">=17.0.2",
+      "react-dom": ">=17.0.2"
+    },
+    "prettier": {
+      "printWidth": 80,
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "es5"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.16.5",
+      "@commitlint/cli": "^17.0.3",
+      "@commitlint/config-conventional": "^17.0.3",
+      "@govtechsg/sgds": "latest",
+      "@govtechsg/sgds-web-component": "^1.2.2",
+      "@rollup/plugin-commonjs": "^21.0.2",
+      "@rollup/plugin-node-resolve": "^13.1.3",
+      "@rollup/plugin-replace": "^4.0.0",
+      "formik": "^2.2.9",
+      "husky": "^8.0.1",
+      "raw-loader": "^4.0.2",
+      "rollup": "^2.68.0",
+      "rollup-plugin-copy": "^3.4.0",
+      "rollup-plugin-generate-package-json": "^3.2.0",
+      "rollup-plugin-rename": "^1.0.1",
+      "rollup-plugin-typescript2": "^0.31.2",
+      "tslib": "^2.3.1",
+      "typescript": "^4.5.4",
+      "yup": "^0.32.11"
+    },
+    "dependencies": {
+      "@restart/hooks": "^0.4.6",
+      "@restart/ui": "^1.2.0",
+      "@types/invariant": "^2.2.35",
+      "@types/react-transition-group": "^4.4.4",
+      "react-transition-group": "^4.4.2",
+      "warning": "^4.0.3"
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "overrides": {
+      "nwsapi": "2.2.2"
+    }
+  }

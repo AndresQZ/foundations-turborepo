@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Client</title>
+</head>
+
+<body>
+
+    <script type="module" src="./packages/core/dist/utils.js"> </script>
+    <script type="module" src="./packages/elements/dist/coreLibrary.js"> </script>
+    <script type="module" defer>
+        // import {consumingAPI} from '@repo/core/util' 
+        import {Clients, exposedUtil} from './packages/elements/dist/coreLibrary.js'  
+        const client = new Clients();
+ 
+        console.log(`calling Clients()`)
+   
+    </script>
+
+</body>
+
+

@@ -1,0 +1,15 @@
+{
+  
+  "name": "foundations-turbo-repo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "npm@10.8.2",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.3"
+  }
+}

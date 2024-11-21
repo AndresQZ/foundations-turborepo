@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "es2015",
+     "module": "ES2015",
+      "moduleResolution": "Node",
+      "declaration": true,
+      "outDir": "dist",
+      "declarationDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "lib": ["ESNext", "DOM", "DOM.Iterable"]
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  
