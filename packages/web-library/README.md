@@ -7,8 +7,11 @@ How to support subpath imports
 
 
 
-import { Clients } from "foundations-web-library/clients";
+Once this packages has been uploaded as a NPM package 
+This will be an simple basic how to use it
 
+```Javascript
+import { Clients } from "foundations-web-library/clients";
 import { Internal } from "foundations-web-library/internal";
 import { proxy } from "foundations-web-library/proxy";
 import { utilFc } from "foundations-web-library/utils";
@@ -20,5 +23,8 @@ const client = new Clients("app");
 console.log(`${utilFc()}`)
 
 client.greet()
+```
 
+```package.json
  "foundations-web-library": "1.0.4"
+ ```
